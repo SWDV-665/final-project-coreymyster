@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+
 
 @Component({
   selector: 'app-tab2',
