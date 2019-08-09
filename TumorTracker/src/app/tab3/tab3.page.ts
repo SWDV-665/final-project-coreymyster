@@ -11,4 +11,7 @@ export class Tab3Page {
 
   constructor(public photoService: PhotoProvider) {}
 
+  ngOnInit() {
+    this.photoService.loadSaved();
+  }
 }
