@@ -11,4 +11,9 @@ export class Tab2Page {
 
   constructor() {}
 
+  /*addSpot(e) {
+    let x = event.clientX;
+    let y = event.clientY;
+    console.log("spot clicked at " + x + "and" + y);
+  }*/
 }
