@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { Storage } from '@ionic/storage';
-
+import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
 
 
 /*
@@ -20,14 +20,19 @@ export class PhotoProvider {
 
   public photos: Photo[] = [];
 
-  constructor(private camera: Camera, private storage: Storage) {}
+  constructor(private camera: Camera, private storage: Storage, private photoViewer: PhotoViewer) {}
 
   loadSaved() {
     this.storage.get('photos').then((photos) => {
       this.photos = photos || [];
     });
   }
-  
+
+  viewPhoto(photo) {
+    this.photoViewer.show(photo);
+    console.log("Photo tapped")
+  }
+
   takePicture() {
     const options: CameraOptions = {
       quality: 100,

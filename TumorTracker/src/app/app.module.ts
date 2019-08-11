@@ -11,6 +11,8 @@ import { AppComponent } from './app.component';
 import { Camera } from '@ionic-native/camera/ngx';
 import {PhotoProvider} from './photo-provider.service';
 import { IonicStorageModule } from '@ionic/storage';
+import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
+
 
 
 @NgModule({
@@ -22,6 +24,7 @@ import { IonicStorageModule } from '@ionic/storage';
     SplashScreen,
     Camera,
     PhotoProvider,
+    PhotoViewer,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
