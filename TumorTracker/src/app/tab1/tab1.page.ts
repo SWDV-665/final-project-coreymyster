@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  items: any;
+
+  constructor() {
+    this.items = [
+      'This is the first note.',
+      'This is the second note'
+    ];
+
+  }
 
 }
