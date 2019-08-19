@@ -12,22 +12,25 @@ export class InputDialogServiceService {
   constructor(public alertController: AlertController, public dataService: NotesServiceService) { }
 
 
+
   async showPrompt(item?, index?) {
+    let today = new Date();
+
     const alert = await this.alertController.create({
-      header: item ? 'Edit Item' : 'Add Item',
-      message: item ? 'Please edit item' : 'Please enter item...',
+      header: item ? 'Add Note' : 'Add Note',
+      message: item ? 'Enter details about your pet' : 'Enter details about your pet...',
       inputs: [
         {
-          name: 'name',
+          name: 'note',
           type: 'text',
-          placeholder: 'Name',
-          value: item ? item.name : null
+          placeholder: 'Enter Note',
+          value: item ? item.note : null
         },
         {
-          name: 'quantity',
-          type: 'number',
-          placeholder: 'Quantity',
-          value: item ? item.quantity : null
+          name: 'date',
+          type: 'date',
+          placeholder: 'Enter Date',
+          value: item ? item.date : null
         }
       ],
       buttons: [

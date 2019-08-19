@@ -29,7 +29,7 @@ export class Tab1Page {
 
   async removeItem(item, index) {
     const toast = await this.toastController.create({
-      message: `Removing ${item.name}, ${index}`,
+      message: `Removing ${item.note}, ${index}`,
       duration: 2000
     });
     toast.present();
@@ -38,13 +38,13 @@ export class Tab1Page {
 
   async shareItem(item, index) {
     const toast = await this.toastController.create({
-      message: `Sharing ${item.name}, ${index}`,
+      message: `Sharing ${item.note}, ${index}`,
       duration: 2000
     });
     toast.present();
 
-    let message = `Grocery item - Name: ${item.name} - Quantity: ${item.quantity}`;
-    let subject = `Shared via groceries app`;
+    let message = `Note: ${item.note} - Date: ${item.date}`;
+    let subject = `Shared via the Tumor Tracker App`;
         // Check if sharing via email is supported
     this.socialSharing.share(message, subject).then(() => {
       // Sharing via email is possible
@@ -57,7 +57,7 @@ export class Tab1Page {
 
   async editItem(item, index) {
     const toast = await this.toastController.create({
-      message: `Editing ${item.name}, ${index}`,
+      message: `Editing ${item.note}, ${index}`,
       duration: 2000
     });
     toast.present();

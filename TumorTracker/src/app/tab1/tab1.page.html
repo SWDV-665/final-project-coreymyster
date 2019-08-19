@@ -9,7 +9,7 @@
 <ion-content>
   <ion-list>
     <ion-item-sliding *ngFor="let item of loadItems(); let i = index">
-      <ion-item>{{item.name}} : {{item.quantity}}
+      <ion-item>{{item.date}} : {{item.note}}
     </ion-item>
     <ion-item-options side="end">
     <ion-item-option color="primary" (click)="editItem(item, i)">
