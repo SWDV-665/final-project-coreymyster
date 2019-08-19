@@ -12,6 +12,7 @@ import { Camera } from '@ionic-native/camera/ngx';
 import {PhotoProvider} from './photo-provider.service';
 import { IonicStorageModule } from '@ionic/storage';
 import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 
 
@@ -22,6 +23,7 @@ import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
   providers: [
     StatusBar,
     SplashScreen,
+    SocialSharing,
     Camera,
     PhotoProvider,
     PhotoViewer,
