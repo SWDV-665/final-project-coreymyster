@@ -9,14 +9,19 @@
 <ion-content>
   <ion-card>
   <ion-card-header>
-    <img (click)="addSpot(e)" src="https://www.unitedadlabel.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/U/L/ULAN315_1.jpg" />
-    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    <ion-card-title>Card Title</ion-card-title>
+    <!-- <ion-item *ngFor="let click of clicks; let i = index">
+      <img id="dot" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/1024px-Location_dot_black.svg.png"/>
+      </ion-item> -->
+    <img class="chart" (click)="addSpot($event)" src="https://www.unitedadlabel.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/U/L/ULAN315_1.jpg" />
+    <div id="test">
+  </div>
+    <ion-card-title>Dog Body Chart</ion-card-title>
   </ion-card-header>
 
   <ion-card-content>
-    Keep close to Nature's heart... and break clear away, once in awhile,
-    and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    This chart is used as a reference to show the top and undrside of the body of
+    a dog. When you take notes on the notes page, you may refer to this chart with
+    your vet to see where the tumor you noted is located.
   </ion-card-content>
 </ion-card>
 </ion-content>

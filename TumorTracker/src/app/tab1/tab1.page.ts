@@ -23,6 +23,10 @@ export class Tab1Page {
     ];*/
     }
 
+    ngOnInit() {
+      this.dataService.loadSaved();
+    }
+
     loadItems() {
   return this.dataService.getItems();
 }
