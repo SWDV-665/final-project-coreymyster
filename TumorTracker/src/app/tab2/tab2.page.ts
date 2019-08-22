@@ -25,11 +25,11 @@ export class Tab2Page {
 
     // This output's the X coord of the click
     console.log(e.clientY);
-    let xAdjust = e.clientY - 50;
+    let yAdjust = e.clientY - 90;
 
     // This output's the Y coord of the click
     console.log(e.clientX);
-    let yAdjust = e.clientX - 50;
+    let xAdjust = e.clientX - 27;
     this.clicks.push([yAdjust, xAdjust]);
     console.log(this.clicks);
 
