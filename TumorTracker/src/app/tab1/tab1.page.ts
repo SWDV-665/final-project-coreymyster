@@ -31,6 +31,7 @@ export class Tab1Page {
   return this.dataService.getItems();
 }
 
+  //Removes item from the list.
   async removeItem(item, index) {
     const toast = await this.toastController.create({
       message: `Removing ${item.note}, ${index}`,
@@ -40,6 +41,7 @@ export class Tab1Page {
     this.dataService.removeItem(index);
   }
 
+  // Shares items in the list.
   async shareItem(item, index) {
     const toast = await this.toastController.create({
       message: `Sharing ${item.note}, ${index}`,
@@ -59,6 +61,8 @@ export class Tab1Page {
     });
   }
 
+
+  // Edits item in the list.
   async editItem(item, index) {
     const toast = await this.toastController.create({
       message: `Editing ${item.note}, ${index}`,
@@ -68,6 +72,7 @@ export class Tab1Page {
     this.inputDialogService.showPrompt(item, index);
   }
 
+  // Adds item in the list.
   addItem() {
     console.log("Adding Note");
     this.inputDialogService.showPrompt();

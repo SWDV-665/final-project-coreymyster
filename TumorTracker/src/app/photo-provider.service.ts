@@ -22,6 +22,7 @@ export class PhotoProvider {
 
   constructor(private camera: Camera, private storage: Storage, private photoViewer: PhotoViewer) {}
 
+  // When app loads this loads any photos saved on the device storage.
   loadSaved() {
     this.storage.get('photos').then((photos) => {
       this.photos = photos || [];
@@ -41,6 +42,7 @@ export class PhotoProvider {
     console.log("Photo tapped")
   }
 
+  //Takes the picture and then saves the data in the array.
   takePicture() {
     const options: CameraOptions = {
       quality: 100,

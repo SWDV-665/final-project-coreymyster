@@ -13,6 +13,7 @@ export class Tab2Page {
 
   clicks = []
 
+  // Loads the array containing locations where the screen was tapped.
   loadClicks() {
     console.log("Load clicks called");
 
@@ -21,13 +22,13 @@ export class Tab2Page {
     })
   }
 
+  // Gets the coordinate where someone taps the screen and saves the X and Y
+  // values in an array as an array
   addSpot(e) {
 
-    // This output's the X coord of the click
     console.log(e.clientY);
     let yAdjust = e.clientY - 90;
 
-    // This output's the Y coord of the click
     console.log(e.clientX);
     let xAdjust = e.clientX - 27;
     this.clicks.push([yAdjust, xAdjust]);
