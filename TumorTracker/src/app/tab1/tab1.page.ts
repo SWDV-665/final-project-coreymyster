@@ -69,7 +69,7 @@ export class Tab1Page {
   }
 
   addItem() {
-    console.log("Adding Item");
+    console.log("Adding Note");
     this.inputDialogService.showPrompt();
   }
 
